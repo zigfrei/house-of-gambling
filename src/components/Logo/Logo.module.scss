@@ -1,0 +1,37 @@
+@use '/src/variables/global';
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.desktopIconWrapper {
+  svg {
+    width: 287px;
+    height: 32px;
+  }
+}
+
+.mobileIconWrapper {
+  svg {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media screen and (max-width: global.$breakpoint-mobile) {
+  .mobileIconWrapper {
+    svg {
+      width: 54px;
+      height: 18px;
+    }
+  }
+
+  .desktopIconWrapper {
+    svg {
+      width: 0;
+      height: 0;
+    }
+  }
+}

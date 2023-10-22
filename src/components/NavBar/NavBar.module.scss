@@ -1,0 +1,43 @@
+@use '/src/variables/global';
+
+.list {
+  all:unset;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+  font-family: global.$primary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: global.$color-main-clean-white;
+}
+
+.headerStyle {
+  gap: 32px;
+}
+
+.footerStyle {
+  gap: 40px;
+}
+
+@media screen and (max-width: global.$breakpoint-mobile) {
+  .headerStyle {
+    display: none;
+  }
+
+  .footerStyle {
+    flex-direction: column;
+    // justify-content: start;
+    align-items: start;
+    gap: 2px;
+  }
+
+}

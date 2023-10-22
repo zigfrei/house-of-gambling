@@ -1,0 +1,21 @@
+@use '/src/variables/global';
+
+.main {
+  box-sizing: border-box;
+  width: calc(100vw);
+  height: calc(100vh - 300px);
+  padding: 0 140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: global.$layer-of-content;
+  max-width: 1920px;
+}
+
+@media screen and (max-width: global.$breakpoint-mobile) {
+  .main {
+    flex-direction: column;
+    height: 100%;
+    padding: 70px 10px;
+  }
+}

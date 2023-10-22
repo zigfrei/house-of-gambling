@@ -1,0 +1,143 @@
+@use '/src/variables/global';
+
+.container_1920 {
+  width: 340px;
+  height: 100vh;
+  position: absolute;
+  top:120px;
+  left: calc(100vw/2 - 170px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-wrap: wrap;
+  z-index: global.$layer-of-banners;
+}
+
+.central {
+  margin-left: 18px;
+  margin-right: 18px;
+  animation: slide-in-1920 60000ms;
+  opacity: .7;
+}
+
+.left {
+  animation: slide-out-1920 80000ms;
+  opacity: .3;
+  // left: calc(100vw/2 - 170px);
+}
+
+.right {
+  animation: slide-out-1920 120000ms;
+  opacity: .4;
+}
+
+
+.banner_1920 { 
+  align-items: stretch;
+  width: 100px;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  & svg {
+    padding-bottom: 18px;
+  }
+}
+
+.container_320 {
+  height: 230px;
+  width: 100vW;
+  position: absolute;
+  top: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  z-index: global.$layer-of-banners;
+  display: none;
+}
+
+.top {
+  animation: slide-out-320 30000ms;
+  opacity: .4;
+}
+
+.middle {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  animation: slide-in-320 15000ms;
+  opacity: .7;
+}
+
+.bottom {
+  animation: slide-out-320 20000ms;
+  opacity: .3;
+}
+
+.banner_320 { 
+  height: 50px;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  & svg {
+    height: 50px;
+    width: 50px;
+    padding-right: 12px;
+  }
+}
+
+.longIconWrapper_320 {
+  & svg {
+    height: 50px;
+    width: 100px;
+  }
+}
+
+@keyframes slide-in-1920 {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-63.85%);
+  }
+}
+
+@keyframes slide-out-1920 {
+  from {
+    transform: translateY(-63.55%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-in-320 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(25%);
+  }
+}
+
+@keyframes slide-out-320 {
+  from {
+    transform: translateX(25%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: global.$breakpoint-mobile) {
+  .container_1920 {
+    display: none;
+  }
+
+  .container_320 {
+    display: flex;
+  }
+
+}

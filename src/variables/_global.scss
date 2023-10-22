@@ -1,0 +1,27 @@
+//colors
+$color-main-navy-blue: #110A1D;
+$color-main-clean-white: #FFF;
+$color-additional-purple: #9DADF2;
+$color-main-blue: #478BF9;
+$color-transp-white-60: rgba(255, 255, 255, 0.60);
+$color-transp-white-12: rgba(255, 255, 255, 0.12);
+$color-main-deep-blue: #1E1231;
+
+//hover gradient
+$hover-gradient: linear-gradient(256deg, #478bf9 0%, #9dadf2 100%);
+
+//font
+$primary-font: 'Lexend', sans-serif;
+$secondary-font: 'Futura PT Book', sans-serif;
+
+//breakpoint
+$breakpoint-mobile: 550px;
+
+//z-index
+$layer-of-banners: 10;
+$layer-of-footer: 15;
+$layer-of-footer-buttons-hover:16;
+$layer-of-gradient: 20;
+$layer-of-content: 30;
+$layer-of-overlay: 35;
+$layer-of-content-overlay: 40;

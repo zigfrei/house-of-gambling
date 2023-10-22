@@ -1,0 +1,36 @@
+@use '/src/variables/global';
+
+.page{ 
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // flex-basis: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: global.$color-main-navy-blue;
+  
+}
+
+// .page {
+//   width: 100%;
+//   min-width: 500px;
+//   // max-width: 1920px;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   background-color: global.$color-blue-blue;
+// }
+
+// .main {
+//   display: flex;
+//   flex-direction: column;
+//   height: calc(100vh - 96px - 108px);
+//   justify-content: center;
+//   align-items: center;
+//   margin: 0 auto;
+// }

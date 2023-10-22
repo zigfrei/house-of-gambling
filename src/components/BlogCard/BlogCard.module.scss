@@ -1,0 +1,61 @@
+@use '/src/variables/global';
+
+.main {
+    width: 467px;
+    text-decoration: none;
+    padding: 16px 64px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    margin: 16px 12px 16px 24px;
+    background-color: global.$color-main-deep-blue;
+    border-radius: 196px;
+
+    &:hover {
+        background-color: global.$color-main-blue;
+    }
+}
+
+.text {
+    width: 339px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: global.$primary-font;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: global.$color-main-clean-white;
+    margin-bottom: 14px;
+}
+
+.data {
+    margin: 0;
+    padding: 0;
+    font-family: global.$secondary-font;
+    font-feature-settings: 'liga' off;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 16px;
+    color: global.$color-transp-white-60;
+}
+
+@media screen and (max-width: global.$breakpoint-mobile) {
+    .main {
+        padding: 15px 35px;
+        width: 274px;
+        margin: 10px 6px 10px 10px;
+    }
+
+    .text {
+        width: 204px;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 6px;
+    }
+
+}

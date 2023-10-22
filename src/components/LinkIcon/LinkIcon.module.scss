@@ -1,0 +1,29 @@
+@use '/src/variables/global';
+
+.link {
+    all: unset;
+    cursor: pointer;
+}
+
+.iconWrapper {
+    height: 32px;
+    width: 32px;
+    background-image: url('../../assets/LinkIconBG.svg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-image: url('../../assets/LinkIconHoverBG.svg');
+    }
+}
+
+@media screen and (max-width: global.$breakpoint-mobile) {
+    .iconWrapper {
+        height: 27px;
+        width: 27px;
+        background-size: contain;
+        
+    }
+
+}

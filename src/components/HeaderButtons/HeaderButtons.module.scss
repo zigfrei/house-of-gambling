@@ -1,0 +1,203 @@
+@use '/src/variables/global';
+
+.main {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.button {
+  all: unset;
+  min-width: 75px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 24px;
+  padding: 12px;
+  border: 2px solid global.$color-additional-purple;
+  font-family: global.$primary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: global.$color-main-clean-white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.butttonMenu {
+  all: unset;
+  margin-right: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+  display: none;
+}
+
+.buttonFill {
+  background-color: global.$color-main-blue;
+  border-color: global.$color-main-blue;
+}
+
+.button:hover {
+  background-color: global.$color-additional-purple;
+  color: global.$color-main-navy-blue;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
+  .iconWrapper {
+    svg {
+      path {
+        fill: global.$color-main-navy-blue;
+      }
+    }
+  }
+}
+
+.buttonSignUp:hover {
+  background: global.$hover-gradient;
+  border: unset;
+  padding: 14px;
+  color: global.$color-main-clean-white;
+}
+
+.iconWrapper {
+  height: 16px;
+  width: 16px;
+
+  svg {
+    path {
+      fill: global.$color-additional-purple;
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: global.$color-main-navy-blue;
+      }
+    }
+  }
+}
+
+.burgerMenu {
+position: absolute;
+top:84px;
+left: -2px;
+margin: 0;
+}
+
+.list {
+  all:unset;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
+  gap: 5px;
+  margin-bottom: 30px; 
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  font-family: global.$primary-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: global.$color-main-clean-white;
+  width: 300px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 13px 18px;
+  text-align: right;
+  border-radius: 28px;
+  border: 2px solid global.$color-main-blue;
+}
+
+.burgerButtonLogIn {
+  all: unset;
+  width: 300px;
+  height: 46px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 24px;
+  padding: 13px 20px;
+  border: 2px solid global.$color-additional-purple;
+  font-family: global.$primary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: global.$color-main-clean-white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: global.$color-main-deep-blue;
+  margin-bottom: 5px;
+}
+
+.burgerButtonSignUp {
+  all: unset;
+  width: 300px;
+  height: 46px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 24px;
+  padding: 13px 20px;
+  border: 2px solid global.$color-main-blue;
+  font-family: global.$primary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: global.$color-main-clean-white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: global.$color-main-blue;
+}
+
+@media screen and (max-width: global.$breakpoint-mobile) {
+  .main {
+    gap: 8px;
+  }
+
+  .buttonLogIn {
+    display: none;
+  }
+
+  .buttonSignUp {
+    display: none;
+  }
+
+  .butttonMenu {
+    display: flex;
+  }
+
+  .languageWrapper {
+    display: none;
+  }
+
+  .button {
+    min-width: unset;
+    padding: 6px;
+  }
+
+  .iconWrapper {
+    height: 20px;
+    width: 20px;
+  }
+}
